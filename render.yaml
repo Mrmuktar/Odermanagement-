@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: babyworld-bd-whatsapp-order-manager
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    disk:
+      name: babyworld-data
+      mountPath: /var/data
+      sizeGB: 1
